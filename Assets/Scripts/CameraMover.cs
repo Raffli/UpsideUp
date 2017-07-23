@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraMover : MonoBehaviour {
 
     public float moveSpeed;
+    public PlayerMovement playerMovement;
 	// Use this for initialization
 	void Start () {
 		
@@ -12,6 +13,9 @@ public class CameraMover : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Translate(Vector3.right * (Time.deltaTime* moveSpeed));
+        if (!playerMovement.getEnd())
+        {
+            transform.Translate(Vector3.right * (Time.deltaTime * moveSpeed));
+        }
     }
 }

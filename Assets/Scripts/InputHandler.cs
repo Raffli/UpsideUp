@@ -5,6 +5,7 @@ using UnityEngine;
 public class InputHandler : MonoBehaviour {
 
     Animator playerAnimator;
+    bool isGrounded = true;
 
     void Start () {
         playerAnimator = GameObject.FindWithTag("Player").GetComponent<Animator>();
@@ -13,10 +14,21 @@ public class InputHandler : MonoBehaviour {
 	void Update () {
 		
 	}
-
     public void ChangeGravity()
     {
+        if (isGrounded) {
         playerAnimator.SetTrigger("falling");
         Physics.gravity = new Vector3(0, (-1 * Physics.gravity.y), 0);
+            isGrounded = false;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.parent.tag == "Walkable")
+        {
+            isGrounded = true;
+
+        }
     }
 }
