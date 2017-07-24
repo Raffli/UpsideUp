@@ -144,6 +144,8 @@ MonoBehaviour:
   - {fileID: 1521602699750442, guid: 580e16e54e30170469ba13f684352907, type: 2}
   - {fileID: 1640116282999968, guid: f1d8a63d06805b442a4048ad625610df, type: 2}
   - {fileID: 1395501226145796, guid: 981bd471d16507a42acbbac8ae0300fd, type: 2}
+  - {fileID: 1564893152936116, guid: e1174b877d38ae84aa623a368313bd17, type: 2}
+  - {fileID: 1991439462024686, guid: edfe40cea2751234bb5154e704c6b2ce, type: 2}
   level2Walkable:
   - {fileID: 1514444523394006, guid: 3faffa8224224704c8af989416355960, type: 2}
   - {fileID: 1727000008769658, guid: 94051baeae5a29d4fb1ce9230328572b, type: 2}

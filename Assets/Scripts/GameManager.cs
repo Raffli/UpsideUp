@@ -29,11 +29,11 @@ public class GameManager : MonoBehaviour {
             mainCamera = GameObject.FindWithTag("MainCamera");
 
         for (int x = 0; x < 6; x++) {
-            upperTiles.Add(Instantiate(level1Walkable[Random.Range(0, level1Walkable.Length-1)], upperSpawnPosition, Quaternion.identity));
+            upperTiles.Add(Instantiate(level1Walkable[Random.Range(0, level1Walkable.Length)], upperSpawnPosition, Quaternion.identity));
             upperTiles.Last().transform.parent = floorFolder.transform;
             upperSpawnPosition = new Vector3(upperSpawnPosition.x + tileSize, upperSpawnPosition.y, upperSpawnPosition.z);
 
-            lowerTiles.Add(Instantiate(level1Walkable[Random.Range(0, level1Walkable.Length-1)], lowerSpawnPosition, Quaternion.identity));
+            lowerTiles.Add(Instantiate(level1Walkable[Random.Range(0, level1Walkable.Length)], lowerSpawnPosition, Quaternion.identity));
             lowerTiles.Last().transform.parent = floorFolder.transform;
             lowerSpawnPosition = new Vector3(lowerSpawnPosition.x + tileSize, lowerSpawnPosition.y, lowerSpawnPosition.z);
         }
@@ -45,8 +45,8 @@ public class GameManager : MonoBehaviour {
             {
 
                 int deadly = Random.Range(0, level + 2);
-                GameObject upperTile = level1Walkable[Random.Range(0, level1Walkable.Length-1)];
-                GameObject lowerTile = level1Walkable[Random.Range(0, level1Walkable.Length-1)];
+                GameObject upperTile = level1Walkable[Random.Range(0, level1Walkable.Length)];
+                GameObject lowerTile = level1Walkable[Random.Range(0, level1Walkable.Length)];
 
                 if (deadly > 1)
                 {
@@ -54,11 +54,11 @@ public class GameManager : MonoBehaviour {
                     print(upper);
                     if (upper == 1)
                     {
-                        upperTile = level1Deadly[Random.Range(0, level1Walkable.Length-1)];
+                        upperTile = level1Deadly[Random.Range(0, level1Deadly.Length)];
                     }
                     else
                     {
-                        lowerTile = level1Deadly[Random.Range(0, level1Walkable.Length-1)];
+                        lowerTile = level1Deadly[Random.Range(0, level1Deadly.Length)];
                     }
                 }
 
