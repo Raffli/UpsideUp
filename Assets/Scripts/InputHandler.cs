@@ -6,20 +6,23 @@ public class InputHandler : MonoBehaviour {
 
     Animator playerAnimator;
     bool isGrounded = true;
-
+    AudioSource audio;
     void Start () {
         playerAnimator = GameObject.FindWithTag("Player").GetComponent<Animator>();
+        audio = GetComponent<AudioSource>();
+
     }
-	
-	void Update () {
+
+    void Update () {
 		
 	}
     public void ChangeGravity()
     {
         if (isGrounded) {
-        playerAnimator.SetTrigger("falling");
-        Physics.gravity = new Vector3(0, (-1 * Physics.gravity.y), 0);
+            playerAnimator.SetTrigger("falling");
+            Physics.gravity = new Vector3(0, (-1 * Physics.gravity.y), 0);
             isGrounded = false;
+            audio.Play();
         }
     }
 

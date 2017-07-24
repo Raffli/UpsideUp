@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MenuHandler : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public AudioSource buttonCLick;
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -16,6 +17,7 @@ public class MenuHandler : MonoBehaviour {
 	}
 
     public void StartGame() {
+        buttonCLick.Play();
         SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
 }
