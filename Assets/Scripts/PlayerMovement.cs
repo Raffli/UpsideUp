@@ -17,10 +17,10 @@ public class PlayerMovement : MonoBehaviour {
 	void Update () {
         if (player.transform.position.y > 1)
         {
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 90, -180), 10 * turnSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, 180), 10 * turnSpeed * Time.deltaTime);
         }
         else if (player.transform.position.y < 1) {
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 90, 0), 10 * turnSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 180, 0), 10 * turnSpeed * Time.deltaTime);
         }
     }
 
