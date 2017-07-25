@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 65588478694360042}
   m_Layer: 0
   m_Name: Tile2
-  m_TagString: Deadly
+  m_TagString: D2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

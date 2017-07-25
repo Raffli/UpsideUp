@@ -6,10 +6,6 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
-    public GameObject[] level1Walkable;
-    public GameObject[] level1Deadly;
-    public GameObject[] level2Walkable;
-    public GameObject[] level2Deadly;
     public GameObject floorFolder;
     public Vector3 upperSpawnPosition;
     public Vector3 lowerSpawnPosition;
@@ -19,7 +15,9 @@ public class GameManager : MonoBehaviour {
     public GameObject mainCamera;
     public Text scoreText;
     public PlayerMovement playerMovement;
-
+    public int walkableCount;
+    public int deadlyCount;
+    public static ObjectPooler SharedInstance;
 
     List<GameObject> upperTiles = new List<GameObject>();
     List<GameObject> lowerTiles = new List<GameObject>();
@@ -28,12 +26,23 @@ public class GameManager : MonoBehaviour {
     {
             mainCamera = GameObject.FindWithTag("MainCamera");
 
-        for (int x = 0; x < 6; x++) {
-            upperTiles.Add(Instantiate(level1Walkable[Random.Range(0, level1Walkable.Length)], upperSpawnPosition, Quaternion.identity));
+        
+    }
+
+    public void startBuilding() {
+        for (int x = 0; x < 6; x++)
+        {
+            upperTiles.Add(ObjectPooler.SharedInstance.GetPooledObject("W" + (Random.Range(1, walkableCount))));
+            upperTiles.Last().transform.position = new Vector3(upperSpawnPosition.x, upperSpawnPosition.y, upperSpawnPosition.z);
+            upperTiles.Last().transform.rotation = new Quaternion(180, 0, 0, 0);
+            upperTiles.Last().SetActive(true);
             upperTiles.Last().transform.parent = floorFolder.transform;
             upperSpawnPosition = new Vector3(upperSpawnPosition.x + tileSize, upperSpawnPosition.y, upperSpawnPosition.z);
 
-            lowerTiles.Add(Instantiate(level1Walkable[Random.Range(0, level1Walkable.Length)], lowerSpawnPosition, Quaternion.identity));
+            lowerTiles.Add(ObjectPooler.SharedInstance.GetPooledObject("W" + (Random.Range(1, walkableCount))));
+            lowerTiles.Last().transform.position = new Vector3(lowerSpawnPosition.x, lowerSpawnPosition.y, lowerSpawnPosition.z);
+            lowerTiles.Last().transform.rotation = Quaternion.identity;
+            lowerTiles.Last().SetActive(true);
             lowerTiles.Last().transform.parent = floorFolder.transform;
             lowerSpawnPosition = new Vector3(lowerSpawnPosition.x + tileSize, lowerSpawnPosition.y, lowerSpawnPosition.z);
         }
@@ -45,27 +54,33 @@ public class GameManager : MonoBehaviour {
             {
 
                 int deadly = Random.Range(0, level + 2);
-                GameObject upperTile = level1Walkable[Random.Range(0, level1Walkable.Length)];
-                GameObject lowerTile = level1Walkable[Random.Range(0, level1Walkable.Length)];
+                GameObject upperTile = ObjectPooler.SharedInstance.GetPooledObject("W"+(Random.Range(1, walkableCount)));
+                GameObject lowerTile = ObjectPooler.SharedInstance.GetPooledObject("W" + (Random.Range(1, walkableCount)));
 
                 if (deadly > 1)
                 {
                     int upper = Random.Range(0, 2);
-                    print(upper);
                     if (upper == 1)
                     {
-                        upperTile = level1Deadly[Random.Range(0, level1Deadly.Length)];
+                        upperTile = ObjectPooler.SharedInstance.GetPooledObject("D" + (Random.Range(1, deadlyCount))); ;
                     }
                     else
                     {
-                        lowerTile = level1Deadly[Random.Range(0, level1Deadly.Length)];
+                        lowerTile = ObjectPooler.SharedInstance.GetPooledObject("D" + (Random.Range(1, deadlyCount))); ;
                     }
                 }
 
-                upperTiles.Add(Instantiate(upperTile, upperSpawnPosition, new Quaternion(180,0,0,0)));
+                upperTiles.Add(upperTile);
+                upperTiles.Last().transform.parent = floorFolder.transform;
+                upperTiles.Last().transform.position = upperSpawnPosition;
+                upperTiles.Last().transform.rotation = new Quaternion(180, 0, 0, 0);
+                upperTiles.Last().SetActive(true);
                 upperTiles.Last().transform.parent = floorFolder.transform;
 
-                lowerTiles.Add(Instantiate(lowerTile, lowerSpawnPosition, Quaternion.identity));
+                lowerTiles.Add(lowerTile);
+                lowerTiles.Last().transform.position = lowerSpawnPosition;
+                lowerTiles.Last().transform.rotation = Quaternion.identity;
+                lowerTiles.Last().SetActive(true);
                 lowerTiles.Last().transform.parent = floorFolder.transform;
 
                 upperSpawnPosition = new Vector3(upperSpawnPosition.x + tileSize, upperSpawnPosition.y, upperSpawnPosition.z);

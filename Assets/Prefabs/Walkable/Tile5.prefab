@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4861478867710418}
   - component: {fileID: 114177689096613060}
   m_Layer: 0
-  m_Name: Tile9
-  m_TagString: Walkable
+  m_Name: Tile5
+  m_TagString: W5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

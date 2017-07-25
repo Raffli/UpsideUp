@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 114813208492200194}
   m_Layer: 0
   m_Name: Tile7
-  m_TagString: Walkable
+  m_TagString: W7
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

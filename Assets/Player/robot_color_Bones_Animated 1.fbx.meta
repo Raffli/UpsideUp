@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: b8229b3a4a723134bb45fb6f0139bfb0
-timeCreated: 1500939725
+guid: 6a85c9e98e9ad27418b7137e09875d8c
+timeCreated: 1500989048
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
@@ -172,7 +172,8 @@ ModelImporter:
     400162: upper_arm.L
     400164: upper_arm.R
     4300000: Plane
-    7400000: metarig|Run
+    7400000: metarig|Fall
+    7400002: metarig|Run
     9500000: //RootNode
     10800000: Hemi
     10800002: Hemi.001
@@ -201,6 +202,34 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations:
+    - serializedVersion: 16
+      name: metarig|Fall
+      takeName: metarig|Fall
+      firstFrame: 0
+      lastFrame: 42
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: metarig|Run
       takeName: metarig|Run

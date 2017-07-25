@@ -13,6 +13,14 @@ public class ObjectPooler : MonoBehaviour {
     public List<GameObject> pooledObjects;
     public List<ObjectPoolItem> itemsToPool;
 
+    public static ObjectPooler SharedInstance;
+    public GameManager gm;
+
+    void Awake()
+    {
+        SharedInstance = this;
+    }
+
     void Start()
     {
         pooledObjects = new List<GameObject>();
@@ -25,6 +33,8 @@ public class ObjectPooler : MonoBehaviour {
                 pooledObjects.Add(obj);
             }
         }
+        gm.startBuilding();
+
     }
 
     void Update () {
@@ -33,13 +43,18 @@ public class ObjectPooler : MonoBehaviour {
 
     public GameObject GetPooledObject(string tag)
     {
+        print("get pooled object" + tag);
         for (int i = 0; i < pooledObjects.Count; i++)
         {
             if (!pooledObjects[i].activeInHierarchy && pooledObjects[i].tag == tag)
             {
+                print("return object" + tag);
+
                 return pooledObjects[i];
             }
         }
+        print("return null" + tag);
+
         return null;
     }
 }

@@ -13,7 +13,7 @@ public class TileChecker : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (transform.position.x < (mainCamera.transform.position.x - 30)) {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
 		
 	}

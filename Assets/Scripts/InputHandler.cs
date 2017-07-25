@@ -28,10 +28,9 @@ public class InputHandler : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.parent.tag == "Walkable")
+        if (collision.transform.parent.tag.Contains("W")|| collision.transform.parent.tag.Contains("D"))
         {
             isGrounded = true;
-
         }
     }
 }
