@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 4876863091694166}
   - component: {fileID: 114366982046594808}
   - component: {fileID: 65145421946885464}
+  - component: {fileID: 65054446525328342}
   m_Layer: 0
   m_Name: Tile4
   m_TagString: D4
@@ -183,6 +184,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1692543620253714}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &65054446525328342
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1991439462024686}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 11.81, y: 1, z: 1}
+  m_Center: {x: 2.56, y: 0, z: 0}
 --- !u!65 &65145421946885464
 BoxCollider:
   m_ObjectHideFlags: 1

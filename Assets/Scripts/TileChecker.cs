@@ -14,6 +14,7 @@ public class TileChecker : MonoBehaviour {
 	void Update () {
         if (transform.position.x < (mainCamera.transform.position.x - 30)) {
             gameObject.SetActive(false);
+            gameObject.transform.parent = null;
         }
 		
 	}

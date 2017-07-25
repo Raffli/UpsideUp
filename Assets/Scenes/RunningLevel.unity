@@ -382,7 +382,7 @@ MonoBehaviour:
   scoreText: {fileID: 2110434849}
   playerMovement: {fileID: 1797286870}
   walkableCount: 8
-  deadlyCount: 5
+  deadlyCount: 8
 --- !u!4 &179615679
 Transform:
   m_ObjectHideFlags: 0
@@ -527,6 +527,12 @@ MonoBehaviour:
       type: 2}
   - amountToPool: 15
     objectToPool: {fileID: 1564893152936116, guid: e1174b877d38ae84aa623a368313bd17,
+      type: 2}
+  - amountToPool: 15
+    objectToPool: {fileID: 1395501226145796, guid: b00dcfce1c49d5e43960b89ba16f0a99,
+      type: 2}
+  - amountToPool: 15
+    objectToPool: {fileID: 1395501226145796, guid: 2bd9455220543524c91d52795e89f27e,
       type: 2}
   gm: {fileID: 179615678}
 --- !u!1 &179851890
@@ -988,7 +994,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 334825551
+  randomSeed: -1044923819
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4467,7 +4473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de34209e4376f8a49bfa5ef885764fa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 5
   playerMovement: {fileID: 1797286870}
 --- !u!1 &553997891
 GameObject:
@@ -5167,8 +5173,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 257.3, y: 184.89996}
-  m_SizeDelta: {x: -500, y: -400}
+  m_AnchoredPosition: {x: 272.93494, y: 184.89996}
+  m_SizeDelta: {x: -531.27014, y: -400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1110584158
 MonoBehaviour:
@@ -6499,7 +6505,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1797286866}
-  turnSpeed: 1
+  turnSpeed: 2
   anim: {fileID: 1797286867}
   end: 0
 --- !u!114 &1797286871

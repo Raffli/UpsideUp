@@ -50,28 +50,28 @@ public class GameManager : MonoBehaviour {
 
     void Update() {
         if (!playerMovement.getEnd()) {
-            if (upperSpawnPosition.x < (mainCamera.transform.position.x + 20))
+            if (upperSpawnPosition.x < (mainCamera.transform.position.x + 30))
             {
 
                 int deadly = Random.Range(0, level + 2);
-                GameObject upperTile = ObjectPooler.SharedInstance.GetPooledObject("W"+(Random.Range(1, walkableCount)));
+                GameObject upperTile = ObjectPooler.SharedInstance.GetPooledObject("W" + (Random.Range(1, walkableCount)));
                 GameObject lowerTile = ObjectPooler.SharedInstance.GetPooledObject("W" + (Random.Range(1, walkableCount)));
 
                 if (deadly > 1)
                 {
                     int upper = Random.Range(0, 2);
+                    print(upper);
                     if (upper == 1)
                     {
-                        upperTile = ObjectPooler.SharedInstance.GetPooledObject("D" + (Random.Range(1, deadlyCount))); ;
+                        upperTile = ObjectPooler.SharedInstance.GetPooledObject("D" + (Random.Range(1, deadlyCount)));
                     }
                     else
                     {
-                        lowerTile = ObjectPooler.SharedInstance.GetPooledObject("D" + (Random.Range(1, deadlyCount))); ;
+                        lowerTile = ObjectPooler.SharedInstance.GetPooledObject("D" + (Random.Range(1, deadlyCount)));
                     }
                 }
 
                 upperTiles.Add(upperTile);
-                upperTiles.Last().transform.parent = floorFolder.transform;
                 upperTiles.Last().transform.position = upperSpawnPosition;
                 upperTiles.Last().transform.rotation = new Quaternion(180, 0, 0, 0);
                 upperTiles.Last().SetActive(true);
@@ -89,9 +89,17 @@ public class GameManager : MonoBehaviour {
                 if (lowerSpawnPosition.x > 500) {
                     level = 2;
                 }
+                if (lowerSpawnPosition.x > 800)
+                {
+                    level = 3;
+                }
+                if (lowerSpawnPosition.x > 1100)
+                {
+                    level = 4;
+                }
             }
             score += 0.1f * level;
-            scoreText.text = "Score:" + (int)(score);
+            scoreText.text = "Score: " + (int)(score);
         }
     }
 }
