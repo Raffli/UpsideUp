@@ -261,6 +261,7 @@ GameObject:
   - component: {fileID: 179615679}
   - component: {fileID: 179615678}
   - component: {fileID: 179615680}
+  - component: {fileID: 179615681}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -402,6 +403,43 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &179615681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 179615677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c72dc11c6dfaed4e99324bc211b7d5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObjects: []
+  itemsToPool:
+  - amountToPool: 8
+    objectToPool: {fileID: 1432797521346260, guid: 407dfad35cf2c564bbdbc9c67fdbdf5a,
+      type: 2}
+  - amountToPool: 8
+    objectToPool: {fileID: 1097921377099014, guid: 2539bb08d820f11418359c68f76e8c29,
+      type: 2}
+  - amountToPool: 8
+    objectToPool: {fileID: 1290508243878620, guid: 89e1d6f823d96954eb71bcad196eec59,
+      type: 2}
+  - amountToPool: 8
+    objectToPool: {fileID: 1625091874905426, guid: 1cd21642f01d31e49bcc48653944a765,
+      type: 2}
+  - amountToPool: 8
+    objectToPool: {fileID: 1189317795585884, guid: 921be84bad1587144971d5ccec8a1d60,
+      type: 2}
+  - amountToPool: 8
+    objectToPool: {fileID: 1331507405910230, guid: 50559f8b2c0ad9f40a8214d0abd8b9a2,
+      type: 2}
+  - amountToPool: 8
+    objectToPool: {fileID: 1727000008769658, guid: 94051baeae5a29d4fb1ce9230328572b,
+      type: 2}
+  - amountToPool: 8
+    objectToPool: {fileID: 1514444523394006, guid: 3faffa8224224704c8af989416355960,
+      type: 2}
 --- !u!1 &231936852
 GameObject:
   m_ObjectHideFlags: 0
@@ -6418,7 +6456,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1 &1802566296
 GameObject:
