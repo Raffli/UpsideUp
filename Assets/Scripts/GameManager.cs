@@ -200,13 +200,13 @@ public class GameManager : MonoBehaviour {
 
     void ShowInfo(int multiplier)
     {
-        extraDisplay.GetComponent<Text>().text = multiplier + " x Multiplier";
+        extraDisplay.GetComponentInChildren<Text>().text = multiplier + " x Multiplier";
         extraDisplay.SetActive(true);
     }
 
     public void CoinCollected() {
         score += coinPoints;
-        extraDisplay.GetComponent<Text>().text = "+ "+ coinPoints + " Points";
+        extraDisplay.GetComponentInChildren<Text>().text = "+ "+ coinPoints + " Points";
         extraDisplay.SetActive(true);
     }
 }
