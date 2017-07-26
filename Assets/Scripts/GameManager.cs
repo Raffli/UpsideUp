@@ -21,6 +21,10 @@ public class GameManager : MonoBehaviour {
     public GameObject extraDisplay;
     public GameObject coin;
     public int coinPoints;
+    public Text endScore;
+
+    public GameObject ingameOverlay;
+    public GameObject gameOverOverlay;
 
     List<GameObject> upperTiles = new List<GameObject>();
     List<GameObject> lowerTiles = new List<GameObject>();
@@ -162,13 +166,12 @@ public class GameManager : MonoBehaviour {
             }
 
             int coinSpawn = Random.Range(0, 1000);
-            print(coinSpawn+"-------------------------------------");
-            if (coinSpawn > 998) {
+            if (coinSpawn > 998)
+            {
                 Instantiate(coin, new Vector3(lowerSpawnPosition.x, 1, 0), Quaternion.identity);
-                print("spawn coin"+coinSpawn+"---------------");
             }
             score += 0.1f * level;
-            scoreText.text = "Score: " + (int)(score);  
+            scoreText.text = "Score: " + (int)(score);
         }
         else
         {
@@ -187,6 +190,11 @@ public class GameManager : MonoBehaviour {
             {
                 PlayerPrefs.SetInt("Score3", (int)score);
             }
+
+            ingameOverlay.SetActive(false);
+            gameOverOverlay.SetActive(true);
+            endScore.text = "Your Score: " + (int)score;
+
         }
     }
 
