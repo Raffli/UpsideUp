@@ -17,5 +17,6 @@ public class CameraMover : MonoBehaviour {
         {
             transform.Translate(Vector3.right * (Time.deltaTime * moveSpeed));
         }
+
     }
 }

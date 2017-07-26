@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.parent.tag.Contains("D")) {
+        if (other.transform.tag.Contains("D")) {
             end = true;
             anim.SetBool("isDead", true);
         }
@@ -35,6 +35,11 @@ public class PlayerMovement : MonoBehaviour {
     public bool getEnd()
     {
         return end;
+    }
+
+    public Animator getPlayerAnimator()
+    {
+        return anim;
     }
 
 }

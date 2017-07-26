@@ -18,14 +18,18 @@ public class GameManager : MonoBehaviour {
     public int walkableCount;
     public int deadlyCount;
     public static ObjectPooler SharedInstance;
+    public GameObject extraDisplay;
 
     List<GameObject> upperTiles = new List<GameObject>();
     List<GameObject> lowerTiles = new List<GameObject>();
+    CameraMover mainCameraMover;
+    Animator playerAnimator;
 
     void Start()
     {
             mainCamera = GameObject.FindWithTag("MainCamera");
-
+            mainCameraMover = mainCamera.GetComponent<CameraMover>();
+            playerAnimator = playerMovement.getPlayerAnimator();
         
     }
 
@@ -49,7 +53,8 @@ public class GameManager : MonoBehaviour {
     }
 
     void Update() {
-        if (!playerMovement.getEnd()) {
+        if (!playerMovement.getEnd())
+        {
             if (upperSpawnPosition.x < (mainCamera.transform.position.x + 30))
             {
 
@@ -60,7 +65,6 @@ public class GameManager : MonoBehaviour {
                 if (deadly > 1)
                 {
                     int upper = Random.Range(0, 2);
-                    print(upper);
                     if (upper == 1)
                     {
                         upperTile = ObjectPooler.SharedInstance.GetPooledObject("D" + (Random.Range(1, deadlyCount)));
@@ -86,20 +90,100 @@ public class GameManager : MonoBehaviour {
                 upperSpawnPosition = new Vector3(upperSpawnPosition.x + tileSize, upperSpawnPosition.y, upperSpawnPosition.z);
                 lowerSpawnPosition = new Vector3(lowerSpawnPosition.x + tileSize, lowerSpawnPosition.y, lowerSpawnPosition.z);
 
-                if (lowerSpawnPosition.x > 500) {
+                if (lowerSpawnPosition.x > 400 && lowerSpawnPosition.x < 407)
+                {
                     level = 2;
+                    mainCameraMover.moveSpeed = 7;
+                    playerAnimator.GetComponent<Animator>().speed = 1.5f;
+                    playerMovement.turnSpeed = 3;
+                    if (Physics.gravity.y < 0)
+                    {
+                        Physics.gravity = new Vector3(0, -14, 0);
+                    }
+                    else
+                    {
+                        Physics.gravity = new Vector3(0, 14, 0);
+                    }
+                    ShowInfo(level);
+
                 }
-                if (lowerSpawnPosition.x > 800)
+                if (lowerSpawnPosition.x > 700 && lowerSpawnPosition.x < 707)
                 {
                     level = 3;
+                    mainCameraMover.moveSpeed = 9;
+                    playerAnimator.GetComponent<Animator>().speed = 2.5f;
+                    playerMovement.turnSpeed = 4;
+                    if (Physics.gravity.y < 0)
+                    {
+                        Physics.gravity = new Vector3(0, -16, 0);
+                    }
+                    else
+                    {
+                        Physics.gravity = new Vector3(0, 16, 0);
+                    }
+                    ShowInfo(level);
+
                 }
-                if (lowerSpawnPosition.x > 1100)
+                if (lowerSpawnPosition.x > 1000 && lowerSpawnPosition.x < 1007)
                 {
                     level = 4;
+                    mainCameraMover.moveSpeed = 11;
+                    playerAnimator.GetComponent<Animator>().speed = 3.5f;
+                    playerMovement.turnSpeed = 5;
+                    if (Physics.gravity.y < 0)
+                    {
+                        Physics.gravity = new Vector3(0, -18, 0);
+                    }
+                    else
+                    {
+                        Physics.gravity = new Vector3(0, 18, 0);
+                    }
+                    ShowInfo(level);
+
+                }
+                if (lowerSpawnPosition.x > 1200 && lowerSpawnPosition.x < 1207)
+                {
+                    level = 5;
+                    mainCameraMover.moveSpeed = 13;
+                    playerAnimator.GetComponent<Animator>().speed = 4.5f;
+                    playerMovement.turnSpeed = 6;
+                    if (Physics.gravity.y < 0)
+                    {
+                        Physics.gravity = new Vector3(0, -18, 0);
+                    }
+                    else
+                    {
+                        Physics.gravity = new Vector3(0, 18, 0);
+                    }
+                    ShowInfo(level);
                 }
             }
             score += 0.1f * level;
             scoreText.text = "Score: " + (int)(score);
         }
+        else
+        {
+            int score1 = PlayerPrefs.GetInt("Score1");
+            int score2 = PlayerPrefs.GetInt("Score2");
+            int score3 = PlayerPrefs.GetInt("Score3");
+            if (score > score1)
+            {
+                PlayerPrefs.SetInt("Score1", (int)score);
+            }
+            else if (score > score2)
+            {
+                PlayerPrefs.SetInt("Score2", (int)score);
+            }
+            else if (score > score3)
+            {
+                PlayerPrefs.SetInt("Score3", (int)score);
+            }
+        }
+    }
+
+    void ShowInfo(int multiplier)
+    {
+        extraDisplay.GetComponent<Text>().text = multiplier + " x Multiplier";
+        extraDisplay.SetActive(true);
     }
 }

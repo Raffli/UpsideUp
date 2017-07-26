@@ -7,9 +7,12 @@ public class InputHandler : MonoBehaviour {
     Animator playerAnimator;
     bool isGrounded = true;
     AudioSource audio;
+    PlayerMovement playerMovement;
+
     void Start () {
         playerAnimator = GameObject.FindWithTag("Player").GetComponent<Animator>();
         audio = GetComponent<AudioSource>();
+        playerMovement = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
 
     }
 
@@ -28,7 +31,7 @@ public class InputHandler : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.parent.tag.Contains("W")|| collision.transform.parent.tag.Contains("D"))
+        if ((collision.transform.parent.tag.Contains("W")|| collision.transform.parent.tag.Contains("D"))&& !playerMovement.getEnd())
         {
             isGrounded = true;
         }

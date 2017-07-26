@@ -316,8 +316,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1636988669144660}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.07, y: 0.13376999, z: 0}
-  m_LocalScale: {x: 0.5, y: 1.65, z: 0.5}
+  m_LocalPosition: {x: 4.7106056, y: 0.8396747, z: 0.072607055}
+  m_LocalScale: {x: 0.5, y: 2.516092, z: 0.5}
   m_Children:
   - {fileID: 4375985184380922}
   - {fileID: 4064422093081188}
@@ -359,7 +359,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1395501226145796}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.405005, y: -1.8845861, z: -7.066037}
+  m_LocalPosition: {x: -5.9419794, y: 2.8071976, z: -11.805549}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4513959464639602}
@@ -426,22 +426,22 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1610145448002806}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: -1.05, y: 0.991, z: 0}
+  m_LocalRotation: {x: 0.7040421, y: 0.065763146, z: -0.06576316, w: -0.7040421}
+  m_LocalPosition: {x: -2.43, y: 0.968, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4076787323779862}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 259.327, y: 89.99999, z: -90}
 --- !u!4 &4513959464639602
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1937483729492792}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.54, y: -0.18, z: 0}
-  m_LocalScale: {x: 0.5, y: 1.65, z: 0.5}
+  m_LocalRotation: {x: 0.0020041016, y: -0.013590221, z: -0.13358834, w: 0.99094176}
+  m_LocalPosition: {x: 5.09, y: 0.44, z: 0.07}
+  m_LocalScale: {x: 0.5, y: 2.516092, z: 0.5}
   m_Children:
   - {fileID: 4258952342657440}
   - {fileID: 4564630108111948}
@@ -449,7 +449,7 @@ Transform:
   - {fileID: 4423394696539782}
   m_Father: {fileID: 4302416193216798}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.020000001, y: -1.5740001, z: -15.356001}
 --- !u!4 &4564630108111948
 Transform:
   m_ObjectHideFlags: 1
@@ -469,22 +469,22 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1176803321000644}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 1.03, y: 1.413, z: -0}
+  m_LocalRotation: {x: 0.71033806, y: 0.26312986, z: 0.33280304, w: -0.56162685}
+  m_LocalPosition: {x: 2.57, y: 1.366, z: 0.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4696524710104214}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 256.663, y: -50.207, z: 0}
 --- !u!4 &4696524710104214
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1477697496825220}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.47, y: -0.18, z: 0}
-  m_LocalScale: {x: 0.5, y: 1.65, z: 0.5}
+  m_LocalRotation: {x: -0.0014794774, y: 0.010032637, z: 0.09861822, w: 0.9950737}
+  m_LocalPosition: {x: 4.115906, y: 0.2728247, z: 0.07378366}
+  m_LocalScale: {x: 0.5, y: 2.516092, z: 0.5}
   m_Children:
   - {fileID: 4777354732705476}
   - {fileID: 4159610419541316}
@@ -492,7 +492,7 @@ Transform:
   - {fileID: 4565487768400094}
   m_Father: {fileID: 4302416193216798}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.282, y: 1.1270001, z: 11.317}
 --- !u!4 &4777354732705476
 Transform:
   m_ObjectHideFlags: 1
@@ -997,8 +997,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 12.4, y: 1, z: 1}
-  m_Center: {x: 3, y: 0, z: 0}
+  m_Size: {x: 19.8, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114025984699974058
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1021,8 +1021,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.2
-  m_Center: {x: 2.56, y: 1.36, z: 0}
+  m_Radius: 2.7
+  m_Center: {x: 4.29, y: 1.68, z: 0}
 --- !u!136 &136172247967814762
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -1238,7 +1238,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1046481352
+  randomSeed: 423823064
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -1682,10 +1682,10 @@ ParticleSystem:
     serializedVersion: 5
     enabled: 1
     type: 4
-    angle: 0.03
+    angle: 14.17
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 0.24
+    radiusThickness: 0.78
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
@@ -1703,7 +1703,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.01
+      value: 0.07
       mode: 0
       spread: 0
       speed:
@@ -4500,7 +4500,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1991209723
+  randomSeed: 1047544676
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4944,10 +4944,10 @@ ParticleSystem:
     serializedVersion: 5
     enabled: 1
     type: 4
-    angle: 0.03
+    angle: 14.17
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 0.24
+    radiusThickness: 0.78
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
@@ -4965,7 +4965,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.01
+      value: 0.07
       mode: 0
       spread: 0
       speed:
@@ -7762,7 +7762,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 251155722
+  randomSeed: 1834839021
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -8206,10 +8206,10 @@ ParticleSystem:
     serializedVersion: 5
     enabled: 1
     type: 4
-    angle: 0.03
+    angle: 14.17
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 0.24
+    radiusThickness: 0.78
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
@@ -8227,7 +8227,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.01
+      value: 0.07
       mode: 0
       spread: 0
       speed:
