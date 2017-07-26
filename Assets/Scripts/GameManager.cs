@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class GameManager : MonoBehaviour {
 
@@ -194,6 +196,11 @@ public class GameManager : MonoBehaviour {
             ingameOverlay.SetActive(false);
             gameOverOverlay.SetActive(true);
             endScore.text = "Your Score: " + (int)score;
+        }
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            print("escape");
+            SceneManager.LoadScene(0, LoadSceneMode.Single);
 
         }
     }
@@ -209,4 +216,6 @@ public class GameManager : MonoBehaviour {
         extraDisplay.GetComponentInChildren<Text>().text = "+ "+ coinPoints + " Points";
         extraDisplay.SetActive(true);
     }
+
+
 }

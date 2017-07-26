@@ -27,8 +27,14 @@ public class MenuHandler : MonoBehaviour {
     }
 
     void Update () {
-		
-	}
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+
+
+        }
+
+    }
 
     public void StartGame() {
         buttonCLick.Play();
