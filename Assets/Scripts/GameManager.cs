@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour {
     public int deadlyCount;
     public static ObjectPooler SharedInstance;
     public GameObject extraDisplay;
+    public GameObject coin;
+    public int coinPoints;
 
     List<GameObject> upperTiles = new List<GameObject>();
     List<GameObject> lowerTiles = new List<GameObject>();
@@ -158,8 +160,15 @@ public class GameManager : MonoBehaviour {
                     ShowInfo(level);
                 }
             }
+
+            int coinSpawn = Random.Range(0, 1000);
+            print(coinSpawn+"-------------------------------------");
+            if (coinSpawn > 998) {
+                Instantiate(coin, new Vector3(lowerSpawnPosition.x, 1, 0), Quaternion.identity);
+                print("spawn coin"+coinSpawn+"---------------");
+            }
             score += 0.1f * level;
-            scoreText.text = "Score: " + (int)(score);
+            scoreText.text = "Score: " + (int)(score);  
         }
         else
         {
@@ -184,6 +193,12 @@ public class GameManager : MonoBehaviour {
     void ShowInfo(int multiplier)
     {
         extraDisplay.GetComponent<Text>().text = multiplier + " x Multiplier";
+        extraDisplay.SetActive(true);
+    }
+
+    public void CoinCollected() {
+        score += coinPoints;
+        extraDisplay.GetComponent<Text>().text = "+ "+ coinPoints + " Points";
         extraDisplay.SetActive(true);
     }
 }

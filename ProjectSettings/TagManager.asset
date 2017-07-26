@@ -23,6 +23,7 @@ TagManager:
   - D5
   - D6
   - D7
+  - GameManager
   layers:
   - Default
   - TransparentFX
