@@ -6,12 +6,12 @@ public class InputHandler : MonoBehaviour {
 
     Animator playerAnimator;
     bool isGrounded = true;
-    AudioSource audio;
+    AudioSource gravitySound;
     PlayerMovement playerMovement;
 
     void Start () {
         playerAnimator = GameObject.FindWithTag("Player").GetComponent<Animator>();
-        audio = GetComponent<AudioSource>();
+        gravitySound = GetComponent<AudioSource>();
         playerMovement = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
 
     }
@@ -25,7 +25,7 @@ public class InputHandler : MonoBehaviour {
             playerAnimator.SetTrigger("falling");
             Physics.gravity = new Vector3(0, (-1 * Physics.gravity.y), 0);
             isGrounded = false;
-            audio.Play();
+            gravitySound.Play();
         }
     }
 
