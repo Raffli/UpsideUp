@@ -4524,6 +4524,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1333806078}
+  - {fileID: 1085023699}
   m_Father: {fileID: 596976107}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4672,7 +4673,6 @@ RectTransform:
   m_Children:
   - {fileID: 553997892}
   - {fileID: 1110584157}
-  - {fileID: 1085023699}
   m_Father: {fileID: 1623031626}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4829,7 +4829,7 @@ GameObject:
   - component: {fileID: 711255950}
   - component: {fileID: 711255952}
   - component: {fileID: 711255951}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: ExtraDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5366,7 +5366,7 @@ GameObject:
   - component: {fileID: 1085023701}
   - component: {fileID: 1085023700}
   - component: {fileID: 1085023702}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Panel (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5380,16 +5380,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1085023698}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 25}
-  m_LocalScale: {x: 1.1499999, y: 0.9099999, z: 0.9999998}
+  m_LocalPosition: {x: 0, y: 0, z: 93}
+  m_LocalScale: {x: 1.1499997, y: 0.90999985, z: 1}
   m_Children:
   - {fileID: 711255950}
-  m_Father: {fileID: 596976107}
-  m_RootOrder: 2
+  m_Father: {fileID: 553997892}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -56}
+  m_AnchoredPosition: {x: -449.99997, y: -506}
   m_SizeDelta: {x: 420, y: 64.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1085023700
